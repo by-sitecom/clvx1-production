@@ -4,9 +4,27 @@
 
 @layer components {
 
-  .s_title {
-    @apply mb-5 text-[2.8rem] uppercase font-serif leading-[3rem] text-black;
-  }
+
+  /*  моб заголовок для видео на анимацию или  моб h1 */
+  .m_h1 {
+    @apply 
+    text-[2.8rem] 
+    leading-[3rem]
+    uppercase 
+    font-serif  
+    text-black
+    mb-4;
+  } 
+
+  .m_h2 {
+    @apply 
+    text-[2.125rem] 
+    leading-[2.5rem]
+    uppercase 
+    font-serif  
+    text-black
+    mb-4;
+  } 
   
 
 

@@ -3,9 +3,7 @@ export default function Home() {
   return (
     <div className="grid p-6">
       <div>
-        <h1 className="s_title">
-          Seamless<br></br>Seamless<br></br>Seamless
-        </h1>
+        <h1 className="m_h2">CLVX 1 is a mechanical scissors keyboard</h1>
       </div>
       <p className="text-[1.25rem] leading-[2rem]">
         Clevetura LTD is a design house focused on a development of TouchOnKeys®
