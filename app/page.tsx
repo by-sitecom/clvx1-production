@@ -7,19 +7,14 @@ export default function Home() {
         <div className="media"></div>
         <div className="content">
           <div>
-            <span className="mark">
-              In development
-            </span>
-            <div className="h2">Clevetura LTD</div>
-            <p>
-              Clevetura LTD is a design house focused on a development of
-              TouchOnKeys® technology and products with it.{" "}
-            </p>
-            <p>
-              Headquarter is located in Limassol, Cyprus with offices in
-              Shenzhen and Minsk. Clevetura was founded in 2017 and develops
-              TouchOnKeys from the beginning until now and beyond.
-            </p>
+            <div className="h2">CLVX 1 is a mechanical scissors keyboard</div>
+            <ul>
+              <li>
+                Key travel distance 1.2mm — great for laptop keyboard lovers
+              </li>
+              <li>Quite, tactile and low-profile</li>
+              <li>Standard keys layout — easy to switch</li>
+            </ul>
             <Link href="/" className="video_link">
               <span className="icon">
                 <Image
@@ -38,9 +33,12 @@ export default function Home() {
       </div>
 
       <div className="wrap lr_section">
-        <div className="lg:order-last media"></div>
+        <div className="media lg:order-last"></div>
         <div className="content lg:order-first">
           <div>
+            {/* 
+            <span className="mark">In development</span>
+            */}
             <div className="h2">Clevetura LTD</div>
             <p>
               Clevetura LTD is a design house focused on a development of
