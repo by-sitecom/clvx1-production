@@ -3,29 +3,40 @@
 @tailwind utilities;
 
 @layer components {
-
-
   /*  моб заголовок для видео на анимацию или  моб h1 */
-  .m_h1 {
-    @apply 
+  h1 {
+    @apply mb-4 
+    mt-4
+    font-serif
     text-[2.8rem] 
+    uppercase  
     leading-[3rem]
-    uppercase 
-    font-serif  
-    text-black
-    mb-4;
-  } 
+    text-black;
+  }
 
-  .m_h2 {
-    @apply 
+  h2 {
+    @apply mb-4 
+    mt-4
+    font-serif
     text-[2.125rem] 
+    uppercase  
     leading-[2.5rem]
-    uppercase 
-    font-serif  
-    text-black
-    mb-4;
-  } 
-  
+    text-black;
+  }
 
+  h3 {
+    @apply mb-4 
+    mt-4
+    font-serif
+    text-[1.5rem] 
+    uppercase  
+    leading-[2rem]
+    text-black;
+  }
 
+  p{
+    @apply mb-4 
+    text-[1.25rem] 
+    leading-[2rem];
+  }
 }
