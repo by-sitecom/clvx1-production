@@ -9,7 +9,7 @@
     leading-[2rem];
   }
 
-  h1 {
+  h1, .h1 {
     @apply mb-4 
     mt-4
     font-serif
@@ -19,7 +19,7 @@
     text-black;
   }
 
-  h2 {
+  h2, .h2 {
     @apply mb-4 
     mt-4
     font-serif
@@ -29,7 +29,7 @@
     text-black;
   }
 
-  h3 {
+  h3, .h3 {
     @apply mb-4 
     mt-4
     font-serif
@@ -49,6 +49,18 @@
 
   ul li{
     @apply relative pl-6 mb-2 before:absolute before:left-0 before:w-4 before:h-1px before:top-4 before:content-[''] before:bg-gray-400;
+  }
+
+  .video_link{
+    @apply mb-2 flex flex-row text-xs leading-xs items-center;
+  }
+
+  .video_link .icon{
+    @apply mb-2 mr-4 mt-2 flex h-10 w-10 min-w-[4rem] items-center justify-center rounded-full border-4 border-solid border-gray-300;
+  }
+
+  .video_link .anchor{
+    @apply pb-[0.625rem] pt-[0.375rem];
   }
 
 }
