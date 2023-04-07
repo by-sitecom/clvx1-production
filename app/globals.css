@@ -77,6 +77,26 @@
     @apply pb-[0.625rem] pt-[0.375rem];
   }
 
+  .wrap{
+    @apply mb-6 md:mb-9 xl:mb-12 xxl:mb-14;
+  }
+
+  .mark{
+   @apply mt-4 inline-flex items-center rounded-full bg-gray-300 px-4 py-3 text-s font-medium leading-s;
+  }
+
+  .lr_section{
+    @apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5;
+  }
+
+  .lr_section .content{
+    @apply p-6 md:p-9 xl:col-span-2 xl:p-12 xxl:p-14 xxxl:p-16 flex items-center;
+  }
+
+  .lr_section .media{
+    @apply relative bg-gray-400 xl:col-span-3 portrait:min-h-[50vh] landscape:min-h-screen;
+  }
+
   @media screen(xl) {
     h1,
     .h1 {

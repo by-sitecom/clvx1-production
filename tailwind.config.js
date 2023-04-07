@@ -11,6 +11,7 @@ module.exports = {
       center: true,
     },
     fontSize: {
+      s:"0.825rem",
       xs: "1rem",
       sm: "1.375rem",
       md: "2rem",
@@ -28,6 +29,7 @@ module.exports = {
       lg: "1024px",
       xl: "1200px",
       xxl: "1544px",
+      xxxl: "1800px",
     },
     colors: {
       gray: {
@@ -84,6 +86,7 @@ module.exports = {
         10: "1.1",
       },
       lineHeight: {
+        s:"1rem",
         xs: "1.5rem",
         sm: "2rem",
         md: "3rem",
