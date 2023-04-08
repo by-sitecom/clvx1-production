@@ -15,7 +15,7 @@ export const Team = ({
       {title && <h2 className="text-center">{title}</h2>}
       {content && (
         <div
-          className="mb-5 text-center text-gray-300"
+          className="mb-5 text-center text-xs leading-xs text-gray-300"
           dangerouslySetInnerHTML={{ __html: content }}
         ></div>
       )}
