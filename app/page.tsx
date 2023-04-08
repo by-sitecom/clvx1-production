@@ -3,17 +3,20 @@ import { Footer } from "@/lib/components/Footer/Footer";
 import { Team } from "@/lib/components/Team/Team";
 import { GET_PAGE } from "@/lib/querys/get-page";
 import { IPage } from "@/types/page.interface";
+import Image from "next/image";
 
 export default async function Home() {
   const data:IPage = await fetchAPI(GET_PAGE, {});
   console.log(data)
   return (
     <>
+      {
       <Team
         title={data.team.title}
         content={data.team.content}
         teamList={data.team.properties_team.teamList}
       />
+      }
       {/*<Footer socialMedia={data.footer.properties_footer.socialMedia} />*/}
 
       {/*

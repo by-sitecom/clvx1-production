@@ -2,43 +2,72 @@
 import { ITeamPerson } from "@/types/page.interface";
 import { Person } from "./Person/Person";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Swiper as SwiperType, Navigation } from "swiper";
+import { useRef } from "react";
+import Image from "next/image";
 
 export const TeamList = ({ teamList }: { teamList: ITeamPerson[] }) => {
+  const swiperRef = useRef<SwiperType>();
   return (
-    <Swiper
-      slidesPerView={1}
-      spaceBetween={32}
-      navigation={true}
-      breakpoints={{
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 50,
-        },
-      }}
-      modules={[Navigation]}
-      className="mySwiper"
-    >
-      {teamList?.map((el, key) =>
-        el ? (
-          <SwiperSlide>
-            <Person
-              key={key}
-              photo={el.personImage.sourceUrl}
-              name={el.personName}
-              position={el.personPosition}
-            />
-          </SwiperSlide>
-        ) : null
-      )}
-    </Swiper>
+    <div className="team">
+      <Swiper
+        slidesPerView={2}
+        spaceBetween={32}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Navigation]}
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        className="teamSwiper"
+      >
+        {teamList?.map((el, key) =>
+          el ? (
+            <SwiperSlide>
+              <Person
+                key={key}
+                photo={el.personImage.sourceUrl}
+                name={el.personName}
+                position={el.personPosition}
+              />
+            </SwiperSlide>
+          ) : null
+        )}
+      </Swiper>
+      <div className="prev" onClick={() => swiperRef.current?.slidePrev()}>
+        <span>
+          <Image
+            src="/arrow.svg"
+            alt="prev"
+            layout="fill"
+            objectFit="contain"
+            quality={100}
+          />
+        </span>
+      </div>
+      <div className="next" onClick={() => swiperRef.current?.slideNext()}>
+        <span>
+          <Image
+            src="/arrow.svg"
+            alt="next"
+            layout="fill"
+            objectFit="contain"
+            quality={100}
+          />
+        </span>
+      </div>
+    </div>
   );
 };

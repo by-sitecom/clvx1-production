@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export const Person = ({ photo, name, position }: { photo:string; name:string; position: string }) => {
   return (
-    <div>
+    <div className="person">
       {photo && (
-        <div className="relative mb-4 aspect-[3/4]">
+        <div className="person__photo">
           <Image
             src={photo}
             alt={name}
@@ -15,14 +15,8 @@ export const Person = ({ photo, name, position }: { photo:string; name:string; p
           />
         </div>
       )}
-      {name && (
-        <div className="font-bold text-white">
-          {name}
-        </div>
-      )}
-      {position && (
-        <div className=" text-gray-300 mb-4">{position}</div>
-      )}
+      {name && <div className="person__name">{name}</div>}
+      {position && <div className="person__position">{position}</div>}
     </div>
   );
 };

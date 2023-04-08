@@ -117,6 +117,40 @@
     @apply w-7 h-7 flex items-center justify-center mr-1 last:mr-0 md:mr-2 transition-all hover:opacity-60;
   }
 
+  .team{
+    @apply relative;
+  }
+
+
+  .person {
+
+  }
+
+  .person__photo{
+    @apply relative mb-4 aspect-[3/4]
+  }
+
+  .person__name{
+    @apply font-serif text-xs leading-xs mb-1;
+  }
+
+  .person__position{
+    @apply font-sans text-xs leading-xs text-gray-200;
+  }
+
+  .prev, .next{
+    @apply w-8 h-8 p-2 border-4 rounded-full border-solid border-gray-300 absolute top-1/2 -mt-4 z-10 bg-gray-200 flex
+    cursor-pointer;
+  }
+
+  .prev span, .next span{
+    @apply relative w-full h-full
+  }
+
+  .prev {@apply -left-4 rotate-180;}
+
+  .next {@apply -right-4;}
+
   @media screen(xl) {
     h1,
     .h1 {
