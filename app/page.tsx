@@ -14,7 +14,8 @@ export default async function Home() {
         content={data.team.content}
         teamList={data.team.properties_team.teamList}
       />
-      <Footer socialMedia={data.footer.properties_footer.socialMedia} />
+      {/*<Footer socialMedia={data.footer.properties_footer.socialMedia} />*/}
+
       {/*
       <div className="wrap lr_section">
         <div className="media"></div>

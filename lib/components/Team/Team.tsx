@@ -11,7 +11,7 @@ export const Team = ({
   teamList: ITeamPerson[]
 }) => {
   return (
-    <div className="wrap section">
+    <div className="section bg-gray-200">
       {title && <h2 className="text-center">{title}</h2>}
       {content && (
         <div

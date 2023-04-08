@@ -82,7 +82,7 @@
   }
 
   .section{
-    @apply p-6 md:p-8 xl:p-12 xxl:p-14 xxxl:p-16;
+    @apply py-4 px-6 ;
   }
 
   .mark{
