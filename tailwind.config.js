@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin')
+const plugin = require("tailwindcss/plugin");
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -11,7 +11,7 @@ module.exports = {
       center: true,
     },
     fontSize: {
-      s:"0.825rem",
+      s: "0.825rem",
       xs: "1rem",
       sm: "1.375rem",
       md: "2rem",
@@ -33,19 +33,16 @@ module.exports = {
     },
     colors: {
       gray: {
-        100: "#F5F7F9",
-        200: "#EAEDF1",
-        300: "#DBDDE1",
-        400: "#666",
-        500: "#333",
+        100: "#F2F2F2",
+        200: "#A6A6A6",
+        300: "#595959",
+        400: "#373737",
+        500: "#0D0D0D",
       },
       black: "#000000",
-      dark: "#1C1C1C",
+      green: "#15e7a1",
+      blue: "#136bfb",
       white: "#FFFFFF",
-      red: {
-        100: "#EB232C",
-        200: "#CA1C24",
-      },
     },
     spacing: {
       0: "0rem",
@@ -82,11 +79,14 @@ module.exports = {
       4: "4px",
     },
     extend: {
+      gridTemplateColumns: {
+        14: "repeat(14, minmax(0, 1fr))",
+      },
       scale: {
         10: "1.1",
       },
       lineHeight: {
-        s:"1rem",
+        s: "1rem",
         xs: "1.5rem",
         sm: "2rem",
         md: "3rem",
@@ -110,6 +110,8 @@ module.exports = {
           fontSize: "16px",
           lineHeight: "2rem",
           fontFamily: "var(--font-noto-sans)",
+          backgroundColor: "#000000",
+          color: "#F2F2F2",
         },
       });
     }),

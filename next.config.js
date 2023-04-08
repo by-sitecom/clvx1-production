@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ["backend.clvx1.com", "clvx1.com"],
+    domains: ["backend.clvx1.com", "clvx1.com", "clvx1.sitecom.by"],
   },
 };
 

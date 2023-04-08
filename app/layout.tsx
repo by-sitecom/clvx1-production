@@ -1,4 +1,5 @@
 import './globals.css'
+import "@/app/swiper-bundle.min.css";
 import { Montserrat, Noto_Sans } from "next/font/google";
 
 const montserrat = Montserrat({

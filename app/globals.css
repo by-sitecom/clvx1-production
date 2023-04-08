@@ -17,7 +17,7 @@
     text-[2.8rem] 
     uppercase  
     leading-[3rem]
-    text-black;
+    text-white;
   }
 
   h2,
@@ -28,7 +28,7 @@
     text-[2.125rem] 
     uppercase  
     leading-[2.5rem]
-    text-black;
+    text-white;
   }
 
   h3,
@@ -39,7 +39,7 @@
     text-[1.5rem] 
     uppercase  
     leading-[2rem]
-    text-black;
+    text-white;
   }
 
   h4,
@@ -50,7 +50,7 @@
     text-[1rem] 
     uppercase  
     leading-[1.25rem]
-    text-black;
+    text-white;
   }
 
   p {
@@ -81,20 +81,40 @@
     @apply mb-6 md:mb-9 xl:mb-12 xxl:mb-14;
   }
 
+  .section{
+    @apply p-6 md:p-8 xl:p-12 xxl:p-14 xxxl:p-16;
+  }
+
   .mark{
    @apply mt-4 inline-flex items-center rounded-full bg-gray-300 px-4 py-3 text-s font-medium leading-s;
   }
 
   .lr_section{
-    @apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5;
+    @apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-14;
   }
 
   .lr_section .content{
-    @apply p-6 md:p-9 xl:col-span-2 xl:p-12 xxl:p-14 xxxl:p-16 flex items-center;
+    @apply p-6 md:p-8 xl:col-span-6 xl:p-12 xxl:p-14 xxxl:p-16 flex items-center;
   }
 
   .lr_section .media{
-    @apply relative bg-gray-400 xl:col-span-3 portrait:min-h-[50vh] landscape:min-h-screen;
+    @apply relative bg-gray-400 xl:col-span-8 portrait:min-h-[50vh] landscape:min-h-screen;
+  }
+
+  .footer{
+    @apply grid grid-cols-1 gap-y-6 p-6 bg-gray-400 md:grid-cols-2 md:p-8 xl:px-12 xxl:px-14 xxxl:px-16;
+  }
+
+  .footer .logo{
+    @apply flex justify-center md:justify-start;
+  }
+
+  .social_media{
+    @apply flex flex-wrap justify-center md:justify-end;
+  }
+
+  .social_media .item{
+    @apply w-7 h-7 flex items-center justify-center mr-1 last:mr-0 md:mr-2 transition-all hover:opacity-60;
   }
 
   @media screen(xl) {

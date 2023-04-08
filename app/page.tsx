@@ -1,8 +1,21 @@
-import Image from "next/image";
-import Link from "next/link";
-export default function Home() {
+import { fetchAPI } from "@/lib/client/graphql-client";
+import { Footer } from "@/lib/components/Footer/Footer";
+import { Team } from "@/lib/components/Team/Team";
+import { GET_PAGE } from "@/lib/querys/get-page";
+import { IPage } from "@/types/page.interface";
+
+export default async function Home() {
+  const data:IPage = await fetchAPI(GET_PAGE, {});
+  console.log(data)
   return (
-    <div>
+    <>
+      <Team
+        title={data.team.title}
+        content={data.team.content}
+        teamList={data.team.properties_team.teamList}
+      />
+      <Footer socialMedia={data.footer.properties_footer.socialMedia} />
+      {/*
       <div className="wrap lr_section">
         <div className="media"></div>
         <div className="content">
@@ -36,9 +49,9 @@ export default function Home() {
         <div className="media lg:order-last"></div>
         <div className="content lg:order-first">
           <div>
-            {/* 
+
             <span className="mark">In development</span>
-            */}
+           
             <div className="h2">Clevetura LTD</div>
             <p>
               Clevetura LTD is a design house focused on a development of
@@ -53,7 +66,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/*
+
       <h1>
         CLVX 1 is a mechanical scissors keyboard
       </h1>
@@ -104,6 +117,6 @@ export default function Home() {
         and develops TouchOnKeys from the beginning until now and beyond.
       </p>
   */}
-    </div>
+    </>
   );
 }
