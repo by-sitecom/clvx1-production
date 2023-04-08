@@ -16,12 +16,12 @@ export const Person = ({ photo, name, position }: { photo:string; name:string; p
         </div>
       )}
       {name && (
-        <div className="mb-2 text-xs font-bold leading-xs text-white">
+        <div className="font-bold text-white">
           {name}
         </div>
       )}
       {position && (
-        <div className="text-xs leading-xs text-gray-300 mb-4">{position}</div>
+        <div className=" text-gray-300 mb-4">{position}</div>
       )}
     </div>
   );

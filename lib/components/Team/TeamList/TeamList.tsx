@@ -7,7 +7,7 @@ import { Navigation } from "swiper";
 export const TeamList = ({ teamList }: { teamList: ITeamPerson[] }) => {
   return (
     <Swiper
-      slidesPerView={2}
+      slidesPerView={1}
       spaceBetween={32}
       navigation={true}
       breakpoints={{
