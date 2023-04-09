@@ -157,7 +157,7 @@
   }
 
   .wrapper {
-    @apply mb-6;
+    @apply mb-2;
   }
 
   .section {
@@ -188,7 +188,7 @@
   }
 
   .awards{
-    @apply relative mb-4 mt-6;
+    @apply relative mb-6 mt-6;
   }
 
   .award{
