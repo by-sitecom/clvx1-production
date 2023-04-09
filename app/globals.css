@@ -169,7 +169,7 @@
   }
 
   .section_media{
-    @apply w-full min-h-[50vh] relative;
+    @apply aspect-[4/3] relative;
   }
 
   .section__title {
