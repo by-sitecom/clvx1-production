@@ -172,7 +172,7 @@
   }
 
   .section__title {
-    @apply mb-2 
+    @apply mb-4 
     mt-4
     text-center
     font-serif 
@@ -183,7 +183,7 @@
   }
 
   .section__dscr {
-    @apply mb-5 text-center font-sans text-xs leading-xs text-gray-200;
+    @apply mb-6 text-center font-sans text-xs leading-xs text-gray-200;
   }
 
   .awards {
@@ -195,16 +195,16 @@
   }
 
   .specification {
-    @apply mb-4 bg-gray-500 mt-4;
+    @apply mb-4 bg-gray-500 mt-5;
   }
 
   .specification_group {
-    @apply mb-4;
+    @apply mb-6;
   }
 
   .specification_title {
     @apply mb-1 
-    mt-4
+    mt-2
     font-serif 
     text-[0.875rem]  
     uppercase
