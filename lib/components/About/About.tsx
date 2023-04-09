@@ -24,11 +24,11 @@ export const About = ({
         />
       </div>
       <div className="section bb">
-        <div>{title && <div className="section__title">{title}</div>}</div>
+        <div>{title && <div className="section__title text-left">{title}</div>}</div>
 
         {content && (
           <div
-            className="section__dscr"
+            className="section__dscr text-left"
             dangerouslySetInnerHTML={{ __html: content }}
           ></div>
         )}
