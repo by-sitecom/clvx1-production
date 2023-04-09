@@ -156,7 +156,7 @@
   }
 
   .wrapper {
-    @apply mb-2;
+    @apply mb-0;
   }
 
   .section {
@@ -172,7 +172,7 @@
   }
 
   .section__title {
-    @apply mb-4 
+    @apply mb-2 
     mt-4
     text-center
     font-serif 
@@ -183,11 +183,11 @@
   }
 
   .section__dscr {
-    @apply mb-6 text-center font-sans text-xs leading-xs text-gray-200;
+    @apply mb-5 text-center font-sans text-xs leading-xs text-gray-200;
   }
 
   .awards {
-    @apply relative mb-6 mt-6;
+    @apply relative mb-5 mt-4;
   }
 
   .award {
@@ -195,15 +195,15 @@
   }
 
   .specification {
-    @apply mb-4 bg-gray-500 mt-5;
+    @apply mb-5 bg-gray-500 mt-5;
   }
 
   .specification_group {
-    @apply mb-6;
+    @apply mb-5;
   }
 
   .specification_title {
-    @apply mb-1 
+    @apply mb-2 
     mt-2
     font-serif 
     text-[0.875rem]  
