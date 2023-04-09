@@ -20,13 +20,18 @@ export default async function Home() {
           data.specification.properties_specification.specificationGroup
         }
       />
-      {/*
-            <About
+      <About
         title={data.company.properties_company.companyTitle}
         content={data.company.properties_company.companyDescription}
         companyImage={data.company.properties_company.companyImage}
         companyAwards={data.company.properties_company.companyAwards}
       />
+      <Team
+        title={data.team.properties_team.teamTitle}
+        content={data.team.properties_team.teamDescription}
+        teamList={data.team.properties_team.teamList}
+      />
+      {/*
       <Team
         title={data.team.properties_team.teamTitle}
         content={data.team.properties_team.teamDescription}

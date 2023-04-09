@@ -68,9 +68,6 @@ module.exports = {
       19: "8.5rem",
       20: "9rem",
     },
-    aspectRatio: {
-      "4/3": "4 / 3",
-    },
     boxShadow: {
       border: "0 0px 0px 1px #F5F7F9",
     },
@@ -82,6 +79,9 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         14: "repeat(14, minmax(0, 1fr))",
+      },
+      aspectRatio: {
+        "4/3": "4 / 3",
       },
       scale: {
         10: "1.1",

@@ -15,7 +15,7 @@ export const About = ({
   companyAwards: ICompanyAwards[];
 }) => {
   return (
-    <div className="wrapper">
+    <div className="section">
       <div className="section_media">
         <Image
           src={companyImage.sourceUrl}
@@ -25,16 +25,18 @@ export const About = ({
           quality={100}
         />
       </div>
-      <div className="section bb">
+      <div className="wrapper section_wrapper">
         <div>
           {title && <div className="section__title text-left">{title}</div>}
         </div>
 
         {content && (
-          <div
-            className="section__dscr text-left"
-            dangerouslySetInnerHTML={{ __html: content }}
-          ></div>
+          <div className="section__content">
+            <div
+              className="section__dscr text-left"
+              dangerouslySetInnerHTML={{ __html: content }}
+            ></div>
+          </div>
         )}
         {companyAwards.length > 0 && <Awards companyAwards={companyAwards} />}
       </div>

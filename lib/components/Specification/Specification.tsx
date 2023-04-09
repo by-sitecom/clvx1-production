@@ -11,24 +11,25 @@ export const Specification = ({
   specification: ISpecificationGroup[];
 }) => {
   return (
-    <div className="wrapper">
-      {title && <div className="section__title">{title}</div>}
+      <div className="wrapper">
+        {title && <div className="section__title">{title}</div>}
 
-      {content && (
-        <div
-          className="section__dscr"
-          dangerouslySetInnerHTML={{ __html: content }}
-        ></div>
-      )}
+        {content && (
+          <div
+            className="section__dscr"
+            dangerouslySetInnerHTML={{ __html: content }}
+          ></div>
+        )}
 
-
-      {specification.length > 0 && (
-        <div className="specification">
-          {specification?.map((el, key) =>
-            el ? <SpecificationGroup key={key} specificationGroup={el} /> : null
-          )}
-        </div>
-      )}
-    </div>
+        {specification.length > 0 && (
+          <div className="specification">
+            {specification?.map((el, key) =>
+              el ? (
+                <SpecificationGroup key={key} specificationGroup={el} />
+              ) : null
+            )}
+          </div>
+        )}
+      </div>
   );
 };

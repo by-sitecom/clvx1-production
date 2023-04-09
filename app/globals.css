@@ -80,10 +80,6 @@
     @apply mb-6 md:mb-9 xl:mb-12 xxl:mb-14;
   }
 
-  .section {
-    @apply px-6 py-4;
-  }
-
   .mark {
     @apply mt-4 inline-flex items-center rounded-full bg-gray-300 px-4 py-3 text-s font-medium leading-s;
   }
@@ -117,12 +113,10 @@
   }
 
   .team {
-    @apply relative;
+    @apply relative mt-6 md:mt-7 xl:mt-8;
   }
 
-  .person {
-    @apply mb-4;
-  }
+  .person {}
 
   .person__photo {
     @apply relative mb-4 aspect-[3/4];
@@ -155,20 +149,12 @@
     @apply -right-4;
   }
 
-  .section {
-    @apply px-6 py-4;
-  }
-
   .section.bb {
     @apply border-b-1 border-solid border-gray-400;
   }
 
-  .section_media {
-    @apply relative aspect-[4/3];
-  }
-
   .awards {
-    @apply relative mb-5 mt-5;
+    @apply relative mt-6 xl:mt-8 xxl:mt-8;
   }
 
   .award {
@@ -176,7 +162,17 @@
   }
 
   .wrapper {
-    @apply p-6 md:p-8 xl:p-10 xxl:p-12 xxxl:p-14;
+    @apply p-6 md:p-8 xl:p-12 xxl:p-14 xxxl:p-16;
+  }
+
+  .section {
+    @apply md:grid md:grid-cols-2 xl:grid-cols-14;
+  }
+
+  .section_wrapper{@apply xl:col-span-6}
+
+  .section_media {
+    @apply relative aspect-[4/3] md:aspect-auto md:min-h-[50vh] xl:min-h-screen md:overflow-hidden xl:col-span-8;
   }
 
   .section__title {
@@ -193,12 +189,16 @@
     xl:leading-[3.5rem];
   }
 
+  .section__content{
+    @apply mt-4 md:mt-5 xl:mt-5
+  }
+
   .section__dscr {
-    @apply mb-4 text-center font-sans text-xs leading-xs text-gray-200 lg:text-[1.25rem] lg:leading-sm;
+    @apply mb-4 text-center font-sans text-xs leading-xs opacity-75 lg:text-[1.25rem] lg:leading-sm;
   }
 
   .specification {
-    @apply mt-6 grid grid-cols-1 gap-6 bg-gray-500 p-6 sm:grid-cols-2 md:grid-cols-2 md:gap-8 md:p-8 xl:mt-8 xl:grid-cols-3 xl:gap-10 xl:p-10 xxl:grid-cols-3 xxl:gap-12 xxl:p-12 xxxl:grid-cols-3 xxxl:gap-14 xxxl:p-14;
+    @apply mt-6 grid grid-cols-1 gap-6 bg-gray-400 p-6 sm:grid-cols-2 md:mt-7 md:grid-cols-2 md:gap-8 md:p-8 xl:mt-8 xl:grid-cols-3 xl:gap-12 xl:p-12 xxl:grid-cols-3 xxl:gap-14 xxl:p-14 xxxl:grid-cols-3 xxxl:gap-16 xxxl:p-16;
   }
 
   .specification_group {
@@ -213,7 +213,7 @@
   }
 
   .specification_item {
-    @apply grid grid-cols-2 gap-6 border-b-1 border-solid border-gray-400 py-3 opacity-75;
+    @apply grid grid-cols-2 gap-6 border-b-1 border-solid border-gray-300 py-3 opacity-75;
   }
 
   @media screen(xl) {

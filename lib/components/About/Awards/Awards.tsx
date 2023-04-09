@@ -15,15 +15,27 @@ export const Awards = ({ companyAwards }: { companyAwards: ICompanyAwards[] }) =
         breakpoints={{
           640: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 32,
           },
           768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 2,
+            spaceBetween: 48,
           },
           1024: {
-            slidesPerView: 5,
-            spaceBetween: 50,
+            slidesPerView: 2,
+            spaceBetween: 48,
+          },
+          1200: {
+            slidesPerView: 2,
+            spaceBetween: 56,
+          },
+          1544: {
+            slidesPerView: 2,
+            spaceBetween: 56,
+          },
+          1800: {
+            slidesPerView: 2,
+            spaceBetween: 64,
           },
         }}
         modules={[Navigation]}
