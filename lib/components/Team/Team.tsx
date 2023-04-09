@@ -13,7 +13,7 @@ export const Team = ({
   return (
     <div className="wrapper">
       <div className="section">
-        <div>{title && <div className="section__title">{title}</div>}</div>
+        {title && <div className="section__title">{title}</div>}
 
         {content && (
           <div

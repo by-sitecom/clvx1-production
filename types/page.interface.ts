@@ -1,6 +1,13 @@
 import { IImage } from "./image.interface";
 
 export interface IPage {
+  specification: {
+    properties_specification: {
+      specificationTitle: string
+      specificationDescription: string
+      specificationGroup: ISpecificationGroup[]
+    }
+  }
   company: {
     properties_company: {
       companyTitle: string;
@@ -36,4 +43,14 @@ export interface ISocialMedia {
 
 export interface ICompanyAwards {
   companyAwardImage: IImage;
+}
+
+export interface ISpecificationGroup {
+  specificationGroupTitle: string;
+  specificationItem: ISpecificationItem[];
+}
+
+export interface ISpecificationItem {
+  specificationItemName: string
+  specificationItemValue: string
 }

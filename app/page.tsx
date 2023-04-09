@@ -1,16 +1,25 @@
 import { fetchAPI } from "@/lib/client/graphql-client";
 import { About } from "@/lib/components/About/About";
 import { Footer } from "@/lib/components/Footer/Footer";
+import { Specification } from "@/lib/components/Specification/Specification";
 import { Team } from "@/lib/components/Team/Team";
 import { GET_PAGE } from "@/lib/querys/get-page";
 import { IPage } from "@/types/page.interface";
-import Image from "next/image";
 
 export default async function Home() {
   const data: IPage = await fetchAPI(GET_PAGE, {});
   console.log(data);
   return (
     <>
+      <Specification
+        title={data.specification.properties_specification.specificationTitle}
+        content={
+          data.specification.properties_specification.specificationDescription
+        }
+        specification={
+          data.specification.properties_specification.specificationGroup
+        }
+      />
       <About
         title={data.company.properties_company.companyTitle}
         content={data.company.properties_company.companyDescription}

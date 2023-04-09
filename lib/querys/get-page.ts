@@ -1,6 +1,19 @@
 export const GET_PAGE = `
 query {
-    company: page(id: "company", idType: URI) {
+    specification: page(id: "specification", idType: URI) {
+    properties_specification {
+      specificationTitle
+      specificationDescription
+      specificationGroup {
+        specificationGroupTitle
+        specificationItem {
+          specificationItemName
+          specificationItemValue
+        }
+      }
+    }
+  }
+  company: page(id: "company", idType: URI) {
     properties_company {
       companyTitle
       companyDescription
