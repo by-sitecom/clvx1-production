@@ -11,14 +11,15 @@ export const Team = ({
   teamList: ITeamPerson[]
 }) => {
   return (
-    <div className="p-6">
-      {/*title && <h3 className="text-center">{title}</h3>*/}
-      {/*content && (
+    <div className="section">
+      <div>{title && <div className="section__title">{title}</div>}</div>
+
+      {content && (
         <div
-          className="mb-5 text-center text-gray-300"
+          className="section__dscr"
           dangerouslySetInnerHTML={{ __html: content }}
         ></div>
-      )*/}
+      )}
       {teamList.length > 0 && <TeamList teamList={teamList} />}
     </div>
   );
