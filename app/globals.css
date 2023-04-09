@@ -198,7 +198,7 @@
   }
 
   .specification {
-    @apply mt-6 grid grid-cols-1 gap-6 bg-gray-400 p-6 sm:grid-cols-2 md:mt-7 md:grid-cols-2 md:gap-8 md:p-8 lg:gap-10 lg:p-10 xl:mt-8 xl:grid-cols-3 xl:gap-12 xl:p-12 xxl:grid-cols-3 xxl:gap-14 xxl:p-14 xxxl:grid-cols-3 xxxl:gap-16 xxxl:p-16;
+    @apply mt-5 grid grid-cols-1 gap-6 bg-gray-300 p-6 sm:grid-cols-2 md:mt-7 md:grid-cols-2 md:gap-8 md:p-8 lg:gap-10 lg:p-10 xl:mt-8 xl:grid-cols-3 xl:gap-12 xl:p-12 xxl:grid-cols-3 xxl:gap-14 xxl:p-14 xxxl:grid-cols-3 xxxl:gap-16 xxxl:p-16;
   }
 
   .specification_group {
@@ -213,7 +213,7 @@
   }
 
   .specification_item {
-    @apply grid grid-cols-2 gap-6 border-b-1 border-solid border-gray-300 py-3 opacity-75;
+    @apply grid grid-cols-2 gap-6 border-b-1 border-solid border-gray-400 py-3 opacity-75;
   }
 
   @media screen(xl) {
