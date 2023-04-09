@@ -21,9 +21,7 @@ export const Specification = ({
         ></div>
       )}
 
-      <div className="section__dscr">
-        We work hard more than six years to present you our first own product
-      </div>
+
       {specification.length > 0 && (
         <div className="specification">
           {specification?.map((el, key) =>
