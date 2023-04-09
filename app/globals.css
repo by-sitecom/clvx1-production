@@ -180,7 +180,7 @@
   }
 
   .section__title {
-    @apply mb-4 
+    @apply mb-3 
     text-center
     font-serif 
     text-[1.25rem]  
