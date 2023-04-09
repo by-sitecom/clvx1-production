@@ -6,7 +6,7 @@ export interface IPage {
       companyTitle: string;
       companyDescription: string;
       companyImage: IImage;
-      companyAwards: IImage[];
+      companyAwards: ICompanyAwards[];
     };
   };
   team: {
@@ -32,4 +32,8 @@ export interface ITeamPerson {
 export interface ISocialMedia {
   icon: IImage;
   url: string;
+}
+
+export interface ICompanyAwards {
+  companyAwardImage: IImage;
 }

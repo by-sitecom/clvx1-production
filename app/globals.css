@@ -157,7 +157,7 @@
   }
 
   .wrapper {
-    @apply mb-0;
+    @apply mb-6;
   }
 
   .section {
@@ -185,6 +185,14 @@
 
   .section__dscr {
     @apply mb-5 text-center font-sans text-xs leading-xs text-gray-200;
+  }
+
+  .awards{
+    @apply relative mb-4 ;
+  }
+
+  .award{
+    @apply relative aspect-[3/4];
   }
 
   @media screen(xl) {

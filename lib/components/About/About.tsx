@@ -1,5 +1,7 @@
 import { IImage } from "@/types/image.interface";
+import { ICompanyAwards } from "@/types/page.interface";
 import Image from "next/image";
+import { Awards } from "./Awards/Awards";
 
 export const About = ({
   title,
@@ -10,7 +12,7 @@ export const About = ({
   title: string;
   content: string;
   companyImage: IImage;
-  companyAwards: IImage[];
+  companyAwards: ICompanyAwards[];
 }) => {
   return (
     <div className="wrapper">
@@ -24,7 +26,9 @@ export const About = ({
         />
       </div>
       <div className="section bb">
-        <div>{title && <div className="section__title text-left">{title}</div>}</div>
+        <div>
+          {title && <div className="section__title text-left">{title}</div>}
+        </div>
 
         {content && (
           <div
@@ -32,6 +36,7 @@ export const About = ({
             dangerouslySetInnerHTML={{ __html: content }}
           ></div>
         )}
+        {companyAwards.length > 0 && <Awards companyAwards={companyAwards} />}
       </div>
     </div>
   );
