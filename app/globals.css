@@ -195,7 +195,7 @@
   }
 
   .specification {
-    @apply mb-4 bg-gray-400 mt-4;
+    @apply mb-4 bg-gray-500 mt-4;
   }
 
   .specification_group {
