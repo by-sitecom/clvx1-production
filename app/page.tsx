@@ -1,4 +1,5 @@
 import { fetchAPI } from "@/lib/client/graphql-client";
+import { About } from "@/lib/components/About/About";
 import { Footer } from "@/lib/components/Footer/Footer";
 import { Team } from "@/lib/components/Team/Team";
 import { GET_PAGE } from "@/lib/querys/get-page";
@@ -6,17 +7,22 @@ import { IPage } from "@/types/page.interface";
 import Image from "next/image";
 
 export default async function Home() {
-  const data:IPage = await fetchAPI(GET_PAGE, {});
-  console.log(data)
+  const data: IPage = await fetchAPI(GET_PAGE, {});
+  console.log(data);
   return (
     <>
-      {
+      <About
+        title={data.company.properties_company.companyTitle}
+        content={data.company.properties_company.companyDescription}
+        companyImage={data.company.properties_company.companyImage}
+        companyAwards={data.company.properties_company.companyAwards}
+      />
       <Team
-        title={data.team.title}
-        content={data.team.content}
+        title={data.team.properties_team.teamTitle}
+        content={data.team.properties_team.teamDescription}
         teamList={data.team.properties_team.teamList}
       />
-      }
+
       {/*<Footer socialMedia={data.footer.properties_footer.socialMedia} />*/}
 
       {/*

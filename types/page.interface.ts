@@ -1,11 +1,19 @@
 import { IImage } from "./image.interface";
 
 export interface IPage {
+  company: {
+    properties_company: {
+      companyTitle: string;
+      companyDescription: string;
+      companyImage: IImage;
+      companyAwards: IImage[];
+    };
+  };
   team: {
-    title: string;
-    content: string;
-    properties_team: { 
-      teamList: ITeamPerson[] 
+    properties_team: {
+      teamTitle: string;
+      teamDescription: string;
+      teamList: ITeamPerson[];
     };
   };
   footer: {

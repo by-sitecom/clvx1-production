@@ -122,6 +122,7 @@
   }
 
   .person {
+    @apply mb-4;
   }
 
   .person__photo {
@@ -155,22 +156,35 @@
     @apply -right-4;
   }
 
+  .wrapper {
+    @apply mb-6;
+  }
+
   .section {
-    @apply p-6;
+    @apply px-6 py-4;
+  }
+
+  .section.bb{
+    @apply border-b-1 border-solid border-gray-400;
+  }
+
+  .section_media{
+    @apply w-full min-h-[50vh] relative;
   }
 
   .section__title {
     @apply mb-2 
-    font-serif
-    text-[1.25rem] 
-    uppercase  
-    leading-[2rem]
+    mt-4
     text-center
+    font-serif 
+    text-[1.25rem]  
+    uppercase
+    leading-[2rem]
     text-white;
   }
 
   .section__dscr {
-    @apply font-sans text-xs text-center leading-xs text-gray-200 mb-5;
+    @apply mb-5 text-center font-sans text-xs leading-xs text-gray-200;
   }
 
   @media screen(xl) {

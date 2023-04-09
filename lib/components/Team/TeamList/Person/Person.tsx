@@ -1,4 +1,3 @@
-import { ITeamPerson } from "@/types/page.interface";
 import Image from "next/image";
 
 export const Person = ({ photo, name, position }: { photo:string; name:string; position: string }) => {
