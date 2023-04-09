@@ -213,7 +213,45 @@
   }
 
   .specification_item {
-    @apply grid grid-cols-2 gap-6 border-b-1 border-solid border-gray-400 py-3 opacity-75;
+    @apply grid grid-cols-2 gap-6 border-b-1 border-solid border-gray-200 py-3 opacity-75;
+  }
+
+  .roadMap{
+    @apply mt-6 md:mt-7 xl:mt-8 grid grid-cols-1 gap-6 md:gap-8 xl:gap-10
+  }
+
+  .bg_roadMap{
+    @apply bg-gray-300
+  }
+
+  .roadMap_gallery{
+    @apply grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 xl:gap-10
+  }
+
+  .roadMap_gallery_item{
+    @apply relative aspect-[4/3]
+  }
+
+  .roadMap_list{
+    @apply bg-gray-300 relative p-6 md:p-8 lg:p-10 xl:p-12 xxl:p-14 xxxl:p-16;
+  }
+
+  .roadMap_item{@apply text-center relative px-4 md:px-5 xl:px-6;}
+  
+  .roadMap_date{
+    @apply mb-7
+  }
+
+  .roadMap_event{
+    @apply pt-2
+  }
+
+  .roadMap_progress{
+    @apply absolute w-full h-1px left-0 top-8 border-solid border-4 border-gray-200 before:absolute before:w-6 before:h-6 before:top-1/2 before:-mt-4 before:content-[attr(before)] before:bg-gray-100 before:left-1/2 before:-ml-4 before:rounded-full after:absolute after:w-4 after:h-4 after:top-1/2 after:-mt-2 before:content-[attr(before)] after:bg-gray-400 after:left-1/2 after:-ml-2 after:rounded-full;
+  }
+
+  .roadMap_progress.in{
+    @apply border-dashed
   }
 
   @media screen(xl) {

@@ -1,6 +1,26 @@
 export const GET_PAGE = `
 query {
-    specification: page(id: "specification", idType: URI) {
+  roadmap: page(id: "roadmap", idType: URI) {
+    properties_roadmap {
+      roadmapTitle
+      roadmapDescription
+      roadmap {
+        roadmapInProgress
+        roadmapDate
+        roadmapEvent
+        roadmapPhoto {
+          altText
+          sourceUrl
+        }
+        roadmapVideo
+      }
+      roadmapGallery {
+        sourceUrl
+        altText
+      }
+    }
+  }
+  specification: page(id: "specification", idType: URI) {
     properties_specification {
       specificationTitle
       specificationDescription

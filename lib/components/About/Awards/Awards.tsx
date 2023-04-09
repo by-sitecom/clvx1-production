@@ -27,7 +27,7 @@ export const Awards = ({ companyAwards }: { companyAwards: ICompanyAwards[] }) =
           },
           1200: {
             slidesPerView: 2,
-            spaceBetween: 56,
+            spaceBetween: 64,
           },
           1544: {
             slidesPerView: 2,

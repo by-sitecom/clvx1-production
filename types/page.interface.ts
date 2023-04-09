@@ -1,13 +1,21 @@
 import { IImage } from "./image.interface";
 
 export interface IPage {
+  roadmap: {
+    properties_roadmap: {
+      roadmapTitle: string;
+      roadmapDescription: string;
+      roadmapGallery: IImage[];
+      roadmap: IRoadMap[];
+    };
+  };
   specification: {
     properties_specification: {
-      specificationTitle: string
-      specificationDescription: string
-      specificationGroup: ISpecificationGroup[]
-    }
-  }
+      specificationTitle: string;
+      specificationDescription: string;
+      specificationGroup: ISpecificationGroup[];
+    };
+  };
   company: {
     properties_company: {
       companyTitle: string;
@@ -53,4 +61,13 @@ export interface ISpecificationGroup {
 export interface ISpecificationItem {
   specificationItemName: string
   specificationItemValue: string
+}
+
+
+export interface IRoadMap {
+  roadmapInProgress: boolean
+  roadmapDate: string
+  roadmapEvent: string
+  roadmapPhoto: IImage
+  roadmapVideo :string
 }

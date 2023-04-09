@@ -1,6 +1,7 @@
 import { fetchAPI } from "@/lib/client/graphql-client";
 import { About } from "@/lib/components/About/About";
 import { Footer } from "@/lib/components/Footer/Footer";
+import { RoadMap } from "@/lib/components/RoadMap/RoadMap";
 import { Specification } from "@/lib/components/Specification/Specification";
 import { Team } from "@/lib/components/Team/Team";
 import { GET_PAGE } from "@/lib/querys/get-page";
@@ -11,6 +12,12 @@ export default async function Home() {
   console.log(data);
   return (
     <>
+      <RoadMap
+        title={data.roadmap.properties_roadmap.roadmapTitle}
+        content={data.roadmap.properties_roadmap.roadmapDescription}
+        roadMap={data.roadmap.properties_roadmap.roadmap}
+        gallery={data.roadmap.properties_roadmap.roadmapGallery}
+      />
       <Specification
         title={data.specification.properties_specification.specificationTitle}
         content={
