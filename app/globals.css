@@ -170,7 +170,7 @@
   }
 
   .section__dscr {
-    @apply font-sans text-xs text-center leading-xs text-gray-200 mb-4;
+    @apply font-sans text-xs text-center leading-xs text-gray-200 mb-5;
   }
 
   @media screen(xl) {
