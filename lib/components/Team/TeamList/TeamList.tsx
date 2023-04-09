@@ -23,7 +23,7 @@ export const TeamList = ({ teamList }: { teamList: ITeamPerson[] }) => {
             spaceBetween: 48,
           },
           1024: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 48,
           },
           1200: {
