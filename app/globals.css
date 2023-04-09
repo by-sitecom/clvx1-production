@@ -188,7 +188,7 @@
   }
 
   .awards{
-    @apply relative mb-4 ;
+    @apply relative mb-6 mt-6;
   }
 
   .award{
