@@ -20,7 +20,8 @@ export default async function Home() {
           data.specification.properties_specification.specificationGroup
         }
       />
-      <About
+      {/*
+            <About
         title={data.company.properties_company.companyTitle}
         content={data.company.properties_company.companyDescription}
         companyImage={data.company.properties_company.companyImage}
@@ -31,6 +32,7 @@ export default async function Home() {
         content={data.team.properties_team.teamDescription}
         teamList={data.team.properties_team.teamList}
       />
+      */}
 
       {/*<Footer socialMedia={data.footer.properties_footer.socialMedia} />*/}
 

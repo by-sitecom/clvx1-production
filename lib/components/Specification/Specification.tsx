@@ -12,28 +12,25 @@ export const Specification = ({
 }) => {
   return (
     <div className="wrapper">
-      <div className="section">
-        {title && <div className="section__title">{title}</div>}
+      {title && <div className="section__title">{title}</div>}
 
-        {content && (
-          <div
-            className="section__dscr"
-            dangerouslySetInnerHTML={{ __html: content }}
-          ></div>
-        )}
+      {content && (
+        <div
+          className="section__dscr"
+          dangerouslySetInnerHTML={{ __html: content }}
+        ></div>
+      )}
 
-        {specification.length > 0 && (
-          <div className="specification">
-            <div className="section">
-              {specification?.map((el, key) =>
-                el ? (
-                  <SpecificationGroup key={key} specificationGroup={el} />
-                ) : null
-              )}
-            </div>
-          </div>
-        )}
+      <div className="section__dscr">
+        We work hard more than six years to present you our first own product
       </div>
+      {specification.length > 0 && (
+        <div className="specification">
+          {specification?.map((el, key) =>
+            el ? <SpecificationGroup key={key} specificationGroup={el} /> : null
+          )}
+        </div>
+      )}
     </div>
   );
 };

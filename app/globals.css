@@ -155,10 +155,6 @@
     @apply -right-4;
   }
 
-  .wrapper {
-    @apply mb-0;
-  }
-
   .section {
     @apply px-6 py-4;
   }
@@ -171,52 +167,54 @@
     @apply relative aspect-[4/3];
   }
 
-  .section__title {
-    @apply mb-2 
-    mt-4
-    text-center
-    font-serif 
-    text-[1.25rem]  
-    uppercase
-    leading-[2rem]
-    text-white;
-  }
-
-  .section__dscr {
-    @apply mb-5 text-center font-sans text-xs leading-xs text-gray-200;
-  }
-
   .awards {
-    @apply relative mb-5 mt-4;
+    @apply relative mb-5 mt-5;
   }
 
   .award {
     @apply relative aspect-[3/4];
   }
 
+  .wrapper {
+    @apply p-6 md:p-8 xl:p-10 xxl:p-12 xxxl:p-14;
+  }
+
+  .section__title {
+    @apply mb-4 
+    text-center
+    font-serif 
+    text-[1.25rem]  
+    uppercase
+    leading-[2rem]
+    text-white
+    md:text-[1.5rem] 
+    md:text-[2rem] 
+    xl:text-[2.8rem] 
+    xl:leading-[3.5rem];
+    ; 
+  }
+
+  .section__dscr {
+    @apply mb-4 text-center font-sans text-xs leading-xs text-gray-200 lg:text-[1.25rem] lg:leading-sm;
+  }
+
   .specification {
-    @apply mb-5 bg-gray-500 mt-5;
+    @apply mt-6 grid grid-cols-1 gap-6 bg-gray-500 p-6 sm:grid-cols-2 md:grid-cols-2 md:gap-8 md:p-8 xl:mt-8 xl:grid-cols-3 xl:gap-10 xl:p-10 xxl:grid-cols-3 xxl:gap-12 xxl:p-12 xxxl:grid-cols-3 xxxl:gap-14 xxxl:p-14;
   }
 
   .specification_group {
-    @apply mb-5;
   }
 
   .specification_title {
-    @apply mb-2 
-    mt-2
-    font-serif 
+    @apply font-serif 
     text-[0.875rem]  
     uppercase
     leading-[2rem]
     text-white;
   }
 
-  .specification_items {
-  }
-
   .specification_item {
-    @apply grid grid-cols-2 gap-6 border-b-1 border-solid border-gray-300 py-3 opacity-75;
+    @apply grid grid-cols-2 gap-6 border-b-1 border-solid border-gray-400 py-3 opacity-75;
   }
 
   @media screen(xl) {
