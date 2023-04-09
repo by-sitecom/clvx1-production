@@ -4,15 +4,15 @@ query {
     properties_company {
       companyTitle
       companyDescription
-      companyImage {
-        sourceUrl
-        altText
-      }
       companyAwards {
         companyAwardImage {
           sourceUrl
           altText
         }
+      }
+      companyImage {
+        sourceUrl
+        altText
       }
     }
   }
