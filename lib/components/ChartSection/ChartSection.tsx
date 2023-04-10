@@ -2,7 +2,7 @@
 import Chart from "react-apexcharts";
 
 export const ChartSection = ({ title }: { title: string }) => {
-  const options = {
+  const options: any = {
     responsive: [
       {
         breakpoint: undefined,
