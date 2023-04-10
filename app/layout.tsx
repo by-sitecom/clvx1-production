@@ -1,6 +1,5 @@
 import './globals.css'
 import "@/app/swiper-bundle.min.css";
-import { Header } from '@/lib/components/Header/Header';
 import { Montserrat, Noto_Sans } from "next/font/google";
 
 const montserrat = Montserrat({
@@ -29,7 +28,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${montserrat.variable} ${notoSans.variable}`}>
-      <Header/>
       <body>{children}</body>
     </html>
   );
