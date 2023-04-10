@@ -61,11 +61,11 @@
   }
 
   ul li {
-    @apply relative mb-2 pl-6 before:absolute before:left-0 before:top-4 before:h-1px before:w-4 before:bg-gray-400 before:content-[''] last:mb-0;
+    @apply relative mb-4 pl-6 before:absolute before:left-0 before:top-4 before:h-1px before:w-4 before:bg-gray-400 before:content-[''] last:mb-0;
   }
 
   .video_link {
-    @apply mb-2 flex flex-row items-center text-xs leading-xs;
+    @apply flex flex-row items-center text-xs leading-xs md:mt-2;
   }
 
   .video_link .icon {
@@ -74,6 +74,18 @@
 
   .video_link .anchor {
     @apply pb-[0.625rem] pt-[0.375rem];
+  }
+
+  .video_link_v {
+    @apply flex flex-col items-center text-xs leading-xs md:mt-0 text-center;
+  }
+
+  .video_link_v .icon {
+    @apply mb-2 mt-0 flex h-10 w-10 min-w-[4rem] items-center justify-center rounded-full border-4 border-solid border-gray-300;
+  }
+
+  .video_link_v .anchor {
+    @apply  pt-[0.5rem];
   }
 
   .wrap {
@@ -132,8 +144,7 @@
 
   .prev,
   .next {
-    @apply absolute top-1/2 z-10 -mt-4 flex h-8 w-8 cursor-pointer rounded-full border-4 border-solid border-gray-300 bg-gray-200
-    p-2;
+    @apply absolute top-1/2 z-10  flex -mt-4 h-8 w-8 cursor-pointer rounded-full border-4 border-solid border-gray-300 bg-gray-500 p-2 xl:-mt-6 xl:h-10 xl:w-10 xl:p-4;
   }
 
   .prev span,
@@ -142,11 +153,11 @@
   }
 
   .prev {
-    @apply -left-4 rotate-180;
+    @apply -left-4 xl:-left-6 rotate-180;
   }
 
   .next {
-    @apply -right-4;
+    @apply -right-4 xl:-right-6;
   }
 
   .section.bb {
@@ -169,7 +180,7 @@
     @apply md:grid md:grid-cols-2 xl:grid-cols-14;
   }
 
-  .section_wrapper{@apply xl:col-span-6}
+  .section_wrapper{@apply xl:col-span-6 flex justify-center flex-col}
 
   .section_media {
     @apply relative aspect-[4/3] md:aspect-auto md:min-h-[50vh] xl:min-h-screen md:overflow-hidden xl:col-span-8;
@@ -197,8 +208,12 @@
     @apply mb-4 text-center font-sans text-xs leading-xs opacity-90 lg:text-[1.25rem] lg:leading-sm;
   }
 
+  .chart{
+    @apply mt-5 bg-gray-500 p-2 md:mt-7 md:p-8 lg:p-10 xl:mt-8 xl:p-12 xxl:p-14 xxxl:p-16;
+  }
+
   .specification {
-    @apply mt-5 grid grid-cols-1 gap-6 bg-gray-300 p-6 sm:grid-cols-2 md:mt-7 md:grid-cols-2 md:gap-8 md:p-8 lg:gap-10 lg:p-10 xl:mt-8 xl:grid-cols-3 xl:gap-12 xl:p-12 xxl:grid-cols-3 xxl:gap-14 xxl:p-14 xxxl:grid-cols-3 xxxl:gap-16 xxxl:p-16;
+    @apply mt-5 grid grid-cols-1 gap-6 bg-gray-500 p-6 sm:grid-cols-2 md:mt-7 md:grid-cols-2 md:gap-8 md:p-8 lg:gap-10 lg:p-10 xl:mt-8 xl:grid-cols-3 xl:gap-12 xl:p-12 xxl:grid-cols-3 xxl:gap-14 xxl:p-14 xxxl:grid-cols-3 xxxl:gap-16 xxxl:p-16;
   }
 
   .specification_group {
@@ -233,7 +248,7 @@
   }
 
   .roadMap_list{
-    @apply bg-gray-300 relative p-6 md:p-8 lg:p-10 xl:p-12 xxl:p-14 xxxl:p-16;
+    @apply bg-gray-500 relative p-6 md:p-8 lg:p-10 xl:p-12 xxl:p-14 xxxl:p-16;
   }
 
   .roadMap_item{@apply text-center relative px-4 md:px-5 xl:px-6;}
@@ -253,6 +268,67 @@
   .roadMap_progress.in{
     @apply border-dashed
   }
+
+  .design{@apply mt-6 md:mt-7 xl:mt-8}
+
+  .design_gallery{
+    @apply relative
+  }
+
+  .design_gallery_item{
+    @apply relative aspect-[4/3]
+  }
+
+  .design_features{
+    @apply relative z-10
+    px-6 md:px-8 lg:px-10 xl:px-12 xxl:px-14 xxxl:px-16
+    mt-6 md:-mt-8 lg:-mt-10 xl:-mt-12 xxl:-mt-14 xxxl:-mt-16
+    xl:grid xl:grid-cols-2
+    ;
+  }
+
+  .design .prev {
+    @apply left-6 md:left-8 lg:left-10 xl:left-12 xxl:left-12 xxxl:left-16 rotate-180;
+  }
+
+  .design .next {
+    @apply right-6 md:right-8 lg:right-10 xl:right-12 xxl:right-12 xxxl:right-16;
+  }
+
+  .design_features_title{
+    @apply font-serif 
+    text-[0.875rem]  
+    uppercase
+    leading-[2rem]
+    text-white
+    mb-3;
+  }
+
+  .design_features_wrap{
+    @apply bg-gray-600 px-6 md:px-8 lg:px-10 pt-6 md:pt-8 lg:pt-10 pb-6 md:pb-8 lg:pb-10
+    border-b-1 border-solid border-gray-500 xl:border-b-0 xl:border-r-1;
+  }
+
+  .design_videos{
+   @apply bg-gray-600 px-6 md:px-8 lg:px-10 p-6 md:p-8 lg:p-10 
+   grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-14 lg:gap-18
+  }
+
+  .design_videos .video_link_v{
+    @apply relative before:absolute before:right-0 before:w-full before:h-1px before:bg-gray-500 before:content-[''] last:before:hidden before:-bottom-6
+    md:before:h-full md:before:w-1px md:before:bottom-0 md:before:-right-8 lg:before:-right-10
+    ;
+  }
+
+
+  .design_features_list{
+    @apply columns-1 grid gap-4 md:grid-cols-2 md:gap-x-8
+  }
+
+  .design_features_list div{
+    @apply relative pl-6 before:absolute before:left-0 before:top-3 before:h-1px before:w-4 before:bg-gray-400 before:content-[''] ;
+  }
+
 
   @media screen(xl) {
     h1,

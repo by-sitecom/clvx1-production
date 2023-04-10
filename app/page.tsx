@@ -1,17 +1,38 @@
 import { fetchAPI } from "@/lib/client/graphql-client";
 import { About } from "@/lib/components/About/About";
+import { ChartSection } from "@/lib/components/ChartSection/ChartSection";
+import { Design } from "@/lib/components/Design/Design";
 import { Footer } from "@/lib/components/Footer/Footer";
 import { RoadMap } from "@/lib/components/RoadMap/RoadMap";
 import { Specification } from "@/lib/components/Specification/Specification";
 import { Team } from "@/lib/components/Team/Team";
+import { Technology } from "@/lib/components/Technology/Technology";
 import { GET_PAGE } from "@/lib/querys/get-page";
 import { IPage } from "@/types/page.interface";
 
 export default async function Home() {
   const data: IPage = await fetchAPI(GET_PAGE, {});
-  console.log(data);
+  console.log(data.design.properties_design.designVideos);
   return (
     <>
+      <Design
+        title={data.design.properties_design.designTitle}
+        content={data.design.properties_design.designDescription}
+        gallery={data.design.properties_design.designGallery}
+        featuresTitle={data.design.properties_design.designFeaturesTitle}
+        features={data.design.properties_design.designFeatures}
+        videos={data.design.properties_design.designVideos}
+      />
+      <Technology
+        title={data.technology.properties_technology.technologyTitle}
+        content={data.technology.properties_technology.technologyDescription}
+        technologyImage={data.technology.properties_technology.technologyImage}
+        videoAnchor={
+          data.technology.properties_technology.technologyAnchorVideo
+        }
+        videoUrl={data.technology.properties_technology.technologyVideoUrl}
+      />
+      <ChartSection title="What CLVX 1 could" />
       <RoadMap
         title={data.roadmap.properties_roadmap.roadmapTitle}
         content={data.roadmap.properties_roadmap.roadmapDescription}

@@ -31,7 +31,7 @@ export const Awards = ({ companyAwards }: { companyAwards: ICompanyAwards[] }) =
           },
           1544: {
             slidesPerView: 2,
-            spaceBetween: 56,
+            spaceBetween: 64,
           },
           1800: {
             slidesPerView: 2,
@@ -52,7 +52,7 @@ export const Awards = ({ companyAwards }: { companyAwards: ICompanyAwards[] }) =
                   src={el.companyAwardImage.sourceUrl}
                   alt={el.companyAwardImage.altText}
                   layout="fill"
-                  objectFit="contain"
+                  objectFit="cover"
                   quality={100}
                 />
               </div>

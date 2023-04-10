@@ -1,6 +1,25 @@
 import { IImage } from "./image.interface";
 
 export interface IPage {
+  design: {
+    properties_design: {
+      designTitle: string;
+      designDescription: string;
+      designFeatures: IDesignFeature[];
+      designGallery: IImage[];
+      designVideos: IDesignVideos[];
+      designFeaturesTitle: string;
+    };
+  };
+  technology: {
+    properties_technology: {
+      technologyTitle: string;
+      technologyDescription: string;
+      technologyAnchorVideo: string;
+      technologyVideoUrl: string;
+      technologyImage: IImage;
+    };
+  };
   roadmap: {
     properties_roadmap: {
       roadmapTitle: string;
@@ -59,15 +78,24 @@ export interface ISpecificationGroup {
 }
 
 export interface ISpecificationItem {
-  specificationItemName: string
-  specificationItemValue: string
+  specificationItemName: string;
+  specificationItemValue: string;
 }
 
-
 export interface IRoadMap {
-  roadmapInProgress: boolean
-  roadmapDate: string
-  roadmapEvent: string
-  roadmapPhoto: IImage
-  roadmapVideo :string
+  roadmapInProgress: boolean;
+  roadmapDate: string;
+  roadmapEvent: string;
+  roadmapPhoto: IImage;
+  roadmapVideo: string;
+}
+
+export interface IDesignFeature {
+  featureItem:string
+}
+
+export interface IDesignVideos {
+  designVideoInDevelopment: boolean;
+  designVideoAnchor: string;
+  designVideoUrl: string;
 }

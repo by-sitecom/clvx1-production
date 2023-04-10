@@ -16,7 +16,7 @@ export const About = ({
 }) => {
   return (
     <div className="section">
-      <div className="section_media">
+      <div className="section_media md:order-last">
         <Image
           src={companyImage.sourceUrl}
           alt={companyImage.altText}
@@ -25,20 +25,21 @@ export const About = ({
           quality={100}
         />
       </div>
-      <div className="wrapper section_wrapper">
+      <div className="wrapper section_wrapper md:order-first">
         <div>
-          {title && <div className="section__title text-left">{title}</div>}
-        </div>
-
-        {content && (
-          <div className="section__content">
-            <div
-              className="section__dscr text-left"
-              dangerouslySetInnerHTML={{ __html: content }}
-            ></div>
+          <div>
+            {title && <div className="section__title text-left">{title}</div>}
           </div>
-        )}
-        {companyAwards.length > 0 && <Awards companyAwards={companyAwards} />}
+          {content && (
+            <div className="section__content">
+              <div
+                className="section__dscr text-left"
+                dangerouslySetInnerHTML={{ __html: content }}
+              ></div>
+            </div>
+          )}
+          {companyAwards.length > 0 && <Awards companyAwards={companyAwards} />}
+        </div>
       </div>
     </div>
   );
