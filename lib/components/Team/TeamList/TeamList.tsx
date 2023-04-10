@@ -13,6 +13,7 @@ export const TeamList = ({ teamList }: { teamList: ITeamPerson[] }) => {
       <Swiper
         slidesPerView={2}
         spaceBetween={32}
+        loop={true}
         breakpoints={{
           640: {
             slidesPerView: 2,

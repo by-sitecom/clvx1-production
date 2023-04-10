@@ -23,6 +23,7 @@ export default async function Home() {
 
   return (
     <>
+      
       <Main title={data.main.properties_main.mainTitle} video={data.main.properties_main.mainVideo} />
       <Clvx1 title={data.clvx1.properties_clvx1.clvx1Title} clvx1Gallery={data.clvx1.properties_clvx1.clvx1Gallery} clvx1List={data.clvx1.properties_clvx1.clvx1List} />
       <TypeTouch

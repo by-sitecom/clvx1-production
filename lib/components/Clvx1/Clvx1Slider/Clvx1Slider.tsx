@@ -16,6 +16,7 @@ export const Clvx1Slider = ({ gallery }: { gallery: IImage[] }) => {
           <Swiper
             slidesPerView={1}
             spaceBetween={0}
+            loop={true}
             modules={[Navigation]}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;

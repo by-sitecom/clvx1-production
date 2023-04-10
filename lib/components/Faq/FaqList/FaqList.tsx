@@ -39,6 +39,7 @@ export const FaqList = ({ faqList }: { faqList: IFaq[] }) => {
             spaceBetween: 64,
           },
         }}
+        loop={true}
         modules={[Navigation]}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;

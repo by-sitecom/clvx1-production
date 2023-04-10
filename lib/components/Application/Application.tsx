@@ -36,7 +36,11 @@ export const Application = ({
   return (
     <div className="wrapper pt-0">
       {title && <div className="section__title">{title}</div>}
-      {inDevelopment && <div className="mark_wrap"><span className="mark">In Development</span></div>}
+      {inDevelopment && (
+        <div className="mark_wrap">
+          <span className="mark">In Development</span>
+        </div>
+      )}
 
       {content && (
         <div
@@ -74,6 +78,7 @@ export const Application = ({
               <Swiper
                 slidesPerView={1}
                 spaceBetween={32}
+                loop={true}
                 breakpoints={{
                   640: {
                     slidesPerView: 2,
@@ -195,6 +200,7 @@ export const Application = ({
           >
             <div className="application_slider">
               <Swiper
+                loop={true}
                 slidesPerView={1}
                 spaceBetween={32}
                 breakpoints={{

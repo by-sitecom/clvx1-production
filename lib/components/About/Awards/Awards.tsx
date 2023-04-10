@@ -38,6 +38,7 @@ export const Awards = ({ companyAwards }: { companyAwards: ICompanyAwards[] }) =
             spaceBetween: 64,
           },
         }}
+        loop={true}
         modules={[Navigation]}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;

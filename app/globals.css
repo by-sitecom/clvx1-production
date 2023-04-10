@@ -512,6 +512,10 @@
     @apply relative aspect-[4/3] mb-4
   }
 
+  .section_list_item_dscr{
+    @apply font-sans text-xs leading-xs opacity-90
+  }
+
   .main{
     @apply w-full relative h-screen bg-gray-600 mb-6 md:mb-8 lg:mb-10 xl:mb-12 xxl:mb-14 xxxl:mb-16
   }
@@ -529,6 +533,12 @@
     pb-6 md:pb-8 lg:pb-10 xl:pb-12 xxl:pb-14 xxxl:pb-16
     before:absolute before:left-1/2 before:w-1px before:content-[''] before:h-4 before:md:h-6 before:lg:h-8 before:xl:h-10 before:xxl:h-12 before:xxxl:h-14 before:bg-black before:bottom-0
     ;
+  }
+
+  .header{
+    @apply w-full fixed h-12 md:h-16 left-0 top-0 transition-all flex justify-between items-center
+    px-6 md:px-8 lg:px-10 xl:px-12 xxl:px-14 xxxl:px-16
+    border-b-1 border-solid border-gray-400 z-50
   }
 
   @media screen(xl) {

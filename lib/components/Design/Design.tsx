@@ -39,6 +39,7 @@ export const Design = ({
         {gallery.length > 0 && (
           <div className="design_gallery">
             <Swiper
+              loop={true}
               slidesPerView={1}
               spaceBetween={0}
               modules={[Navigation]}
