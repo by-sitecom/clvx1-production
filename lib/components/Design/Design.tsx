@@ -25,7 +25,7 @@ export const Design = ({
   const swiperRef = useRef<SwiperType>();
 
   return (
-    <div className="wrapper pl-0 pr-0">
+    <div className="wrapper pl-0 pr-0 pt-0">
       {title && <div className="section__title">{title}</div>}
 
       {content && (

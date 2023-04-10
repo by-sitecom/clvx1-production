@@ -1,16 +1,15 @@
-import { ITeamPerson } from "@/types/page.interface";
-import { TeamList } from "./TeamList/TeamList";
+import { IFaq } from "@/types/page.interface";
+import { FaqList } from "./FaqList/FaqList";
 
-export const Team = ({
+export const Faq = ({
   title,
   content,
-  teamList,
+  faqList,
 }: {
   title: string;
   content: string;
-  teamList: ITeamPerson[];
+  faqList: IFaq[]
 }) => {
-
   return (
     <div className="wrapper">
       {title && <div className="section__title">{title}</div>}
@@ -21,7 +20,7 @@ export const Team = ({
           dangerouslySetInnerHTML={{ __html: content }}
         ></div>
       )}
-      {teamList.length > 0 && <TeamList teamList={teamList} />}
+      {faqList.length > 0 && <FaqList faqList={faqList} />}
     </div>
   );
 };
