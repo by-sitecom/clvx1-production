@@ -452,7 +452,7 @@
   }
 
   .typeTouch_wrap {
-    @apply grid grid-cols-1 bg-gray-600 md:grid-cols-3;
+    @apply grid grid-cols-1 bg-gray-500 md:grid-cols-3;
   }
 
   .typeTouch{
