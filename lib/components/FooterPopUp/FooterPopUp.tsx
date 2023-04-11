@@ -6,7 +6,7 @@ import useDocumentScrollThrottled from "../../hooks/useDocumentScrollThrottled";
 import { Form} from "./Form.tsx/Form";
 
 export const FooterPopUp = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const togglePopup = () => {
     setIsOpen(!isOpen);
   };
