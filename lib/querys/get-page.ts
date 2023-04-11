@@ -2,11 +2,11 @@ export const GET_PAGE = `
 query {
   main: page(id: "main", idType: URI) {
     properties_main {
+      mainTitle
       mainVideo {
         altText
         sourceUrl
       }
-      mainTitle
     }
   }
   clvx1: page(id: "clvx1", idType: URI) {
