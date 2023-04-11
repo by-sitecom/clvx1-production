@@ -12,7 +12,7 @@ export const TypeTouch = ({
   content: string;
   typeTouchVideo: IImage;
 }) => {
-  const videoRef = useRef(null);
+  const videoRef:any = useRef(null);
   useEffect(() => {
     if (videoRef && videoRef.current) {
       videoRef.current.play();
