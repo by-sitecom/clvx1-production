@@ -48,7 +48,7 @@ export const TeamList = ({ teamList }: { teamList: ITeamPerson[] }) => {
       >
         {teamList?.map((el, key) =>
           el ? (
-            <SwiperSlide>
+            <SwiperSlide key={key}>
               <Person
                 key={key}
                 photo={el.personImage.sourceUrl}

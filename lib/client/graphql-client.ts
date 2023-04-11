@@ -5,13 +5,10 @@ export async function fetchAPI(
 ) {
   const headers = { "Content-Type": "application/json" };
 
-  if (process.env.GRAFBASE_API_KEY) {
-    // @ts-ignore
-    headers["Authorization"] = `${process.env.GRAFBASE_API_KEY}`;
-  }
 
   // WPGraphQL Plugin must be enabled
   const res = await fetch("http://clvx1.sitecom.by/graphql" as string, {
+		next: { revalidate: 10 },
     headers,
     method: "POST",
     body: JSON.stringify({
