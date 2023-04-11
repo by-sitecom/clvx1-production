@@ -17,6 +17,7 @@ import { TypeTouch } from "@/lib/components/TypeTouch/TypeTouch";
 import { Clvx1 } from "@/lib/components/Clvx1/Clvx1";
 import { Main } from "@/lib/components/Main/Main";
 import { Header } from "@/lib/components/Header/Header";
+import { FooterPopUp } from "@/lib/components/FooterPopUp/FooterPopUp";
 
 export default async function Home() {
   const data: IPage = await fetchAPI(GET_PAGE, {});
@@ -24,6 +25,7 @@ export default async function Home() {
   return (
     <>
       <Header socialMedia={data.footer.properties_footer.socialMedia} />
+      <FooterPopUp />
       <Main
         title={data.main.properties_main.mainTitle}
         video={data.main.properties_main.mainVideo}

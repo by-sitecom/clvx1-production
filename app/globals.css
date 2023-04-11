@@ -113,7 +113,7 @@
   }
 
   .footer {
-    @apply grid grid-cols-1 gap-y-6 bg-gray-600 p-6 md:grid-cols-2 md:p-8 xl:px-12 xxl:px-14 xxxl:px-16;
+    @apply grid grid-cols-1 gap-y-6 bg-gray-600 p-6 md:grid-cols-2 md:p-8 xl:px-12 xxl:px-14 xxxl:px-16 mb-[8.75rem] xl:mb-[7rem];
   }
 
   .footer .logo {
@@ -224,7 +224,7 @@
   }
 
   .application_btns {
-    @apply flex justify-center;
+    @apply flex justify-center; 
   }
 
   .application_btn {
@@ -535,6 +535,46 @@
     ;
   }
 
+  .footerPopUp{
+    @apply w-full fixed left-0 bottom-0 transition-all flex flex-col justify-center items-center
+    px-6 md:px-8 lg:px-10 xl:px-12 xxl:px-14 xxxl:px-16
+    py-4 xl:py-6 z-[70] md:flex-row
+  }
+
+  .footerPopUp_title{
+    @apply
+    font-serif  
+    text-[0.875rem]
+    uppercase
+    leading-[1.5rem]
+    text-center
+    md:text-right
+    md:mb-0
+    md:mr-4
+    mb-3
+    text-white;
+  }
+
+  .footerPopUp_title span{
+    @apply line-through ml-1
+  }
+
+  .footerPopUp_btn{
+    @apply
+    md:ml-4
+    cursor-pointer
+    font-serif  
+    text-[0.875rem]
+    uppercase
+    leading-[1.5rem]
+    text-white
+    px-5
+    py-3
+    bg-gray-600
+    rounded-full
+    ;
+  }
+
   .header{
     @apply w-full fixed h-12 md:h-14 left-0 top-0 transition-all flex justify-between items-center
     px-6 md:px-8 lg:px-10 xl:px-12 xxl:px-14 xxxl:px-16
@@ -552,7 +592,7 @@
     min-h-screen 
     h-full 
    bg-gray-600
-    z-50
+    z-[100]
     flex
     flex-col
     justify-between
@@ -614,6 +654,46 @@
 
   .menu_wrap{
     @apply p-6 md:p-8 lg:p-10 xl:p-12 xxl:p-14 xxxl:p-16 border-b-1 border-solid border-gray-400 last:border-b-0 sm:border-b-0 sm:border-r-1 last:sm:border-r-0 flex flex-col 
+  }
+
+  .form{
+    @apply col-span-1 h-full sm:col-span-2 flex justify-center p-6 md:p-8 lg:p-10 xl:p-12 xxl:p-14 xxxl:p-16
+  }
+
+  .form_grid{
+    @apply max-w-[480px] w-full flex justify-center flex-col
+  }
+
+  .form_grid div{
+    @apply w-full flex justify-start flex-col items-center mb-4
+  }
+
+  .form_grid div input{
+    @apply px-4 py-3 bg-none border-1 border-solid border-gray-400 outline-0 text-gray-400 w-full rounded-full
+  }
+
+  .btn{
+    @apply px-4 py-3 bg-gray-300 outline-0 text-gray-100 w-full rounded-full mt-4
+  }
+
+  .form_grid div .label{
+    @apply mb-2
+  }
+
+  div.form_title{
+    @apply mb-4 
+    mt-4
+    font-serif
+    text-[1.5rem] 
+    uppercase  
+    text-center
+    leading-[2rem]
+    text-white
+    inline-block;
+  }
+
+  .form_title span{
+    @apply line-through
   }
 
   .menu_list_title{
