@@ -1,4 +1,6 @@
 
+"use client";
+import { fetchAPI } from "@/lib/client/graphql-client";
 import { SEND_EMAIL } from "@/lib/querys/send-mail";
 import Image from "next/image";
 import { useState } from "react";
@@ -26,7 +28,19 @@ export const Form = ({
       ${message}
     `;
 
+    const data = await fetchAPI(SEND_EMAIL, {
+      input: {
+        from: process.env.FORM_EMAIL_FROM,
+        to: process.env.FORM_EMAIL_TO,
+        body: emailContent,
+        subject: "Mail from site",
+      },
+    });
 
+    if (data.sent) {
+      console.log("send", data);
+    }
+    console.log("eror", data);  
   };
 
   

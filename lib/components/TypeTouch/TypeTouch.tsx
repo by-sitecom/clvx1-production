@@ -81,8 +81,7 @@ export const TypeTouch = ({
                   />
                 </span>
                 <span className="anchor">
-                  Take a look inside CLVX 1 key with Clevetura mechanical
-                  engineer
+                  Interview with Clevetura lead firmware engineer
                 </span>
               </Link>
             </div>
