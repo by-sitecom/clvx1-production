@@ -106,7 +106,7 @@ export const RoadMap = ({
             </div>
           </div>
         )}
-        {gallery.length > 0 && (
+        {/*gallery.length > 0 && (
           <div className="roadMap_gallery">
             {gallery?.map((el, key) =>
               el ? (
@@ -122,7 +122,7 @@ export const RoadMap = ({
               ) : null
             )}
           </div>
-        )}
+              )*/}
       </div>
     </div>
   );
