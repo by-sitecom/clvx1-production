@@ -13,7 +13,7 @@ export const Clvx1 = ({
   clvx1List: IClvx1List[];
 }) => {
   return (
-    <div className="section">
+    <div className="section" id="clvx1">
       <div className="section_media md:order-first">
         <Clvx1Slider gallery={clvx1Gallery} />
       </div>

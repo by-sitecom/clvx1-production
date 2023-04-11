@@ -15,7 +15,7 @@ export const About = ({
   companyAwards: ICompanyAwards[];
 }) => {
   return (
-    <div className="section">
+    <div className="section" id="company">
       <div className="section_media md:order-last">
         <Image
           src={companyImage.sourceUrl}

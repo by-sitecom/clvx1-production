@@ -18,7 +18,7 @@ export const TouchRgb = ({
   touchRgbYoutubeLinkAnchor: string;
 }) => {
   return (
-    <div>
+    <div id="touch-RGB">
       <div className="wrapper pb-0">
         {title && <div className="section__title">{title}</div>}
       </div>

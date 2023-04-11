@@ -517,7 +517,7 @@
   }
 
   .main{
-    @apply w-full relative h-screen bg-gray-600 mb-6 md:mb-8 lg:mb-10 xl:mb-12 xxl:mb-14 xxxl:mb-16
+    @apply w-full relative h-screen bg-gray-600 mb-6 md:mb-8 lg:mb-10 xl:mb-12 xxl:mb-14 xxxl:mb-16 
   }
 
   .main_dscr{
@@ -536,9 +536,103 @@
   }
 
   .header{
-    @apply w-full fixed h-12 md:h-16 left-0 top-0 transition-all flex justify-between items-center
+    @apply w-full fixed h-12 md:h-14 left-0 top-0 transition-all flex justify-between items-center
     px-6 md:px-8 lg:px-10 xl:px-12 xxl:px-14 xxxl:px-16
     border-b-1 border-solid border-gray-400 z-50
+  }
+
+  .close{cursor: pointer;}
+
+  .menu{
+    @apply 
+    w-full 
+    fixed
+    top-0
+    -left-full
+    min-h-screen 
+    h-full 
+   bg-gray-600
+    z-50
+    flex
+    flex-col
+    justify-between
+    overflow-y-scroll
+    transition-all
+  }
+
+  .menu.open{
+    @apply left-0
+  }
+
+  .menu_header{
+    @apply 
+    w-full 
+    h-12 
+    min-h-[5rem]
+    md:h-14 
+    md:min-h-[6rem]
+    transition-all 
+    flex 
+    justify-between 
+    items-center
+    px-6 
+    md:px-8 
+    lg:px-10 
+    xl:px-12 
+    xxl:px-14 
+    xxxl:px-16
+    border-b-1 
+    border-solid 
+    border-gray-400 z-50 
+  }
+
+  .menu_footer{
+    @apply
+    w-full 
+    h-12 
+    min-h-[4rem]
+    md:h-16 
+    md:min-h-[6rem]
+    transition-all 
+    flex 
+    justify-center
+    items-center
+    px-6 
+    md:px-8 
+    lg:px-10 
+    xl:px-12 
+    xxl:px-14 
+    xxxl:px-16
+    border-t-1 
+    border-solid 
+    border-gray-400 z-50 
+  }
+
+  .menu_main{
+    @apply grid grid-cols-1 h-full sm:grid-cols-2
+  }
+
+  .menu_wrap{
+    @apply p-6 md:p-8 lg:p-10 xl:p-12 xxl:p-14 xxxl:p-16 border-b-1 border-solid border-gray-400 last:border-b-0 sm:border-b-0 sm:border-r-1 last:sm:border-r-0 flex flex-col 
+  }
+
+  .menu_list_title{
+    @apply mb-3 
+    font-serif 
+    text-[1.25rem]  
+    uppercase
+    leading-[2rem]
+    text-white
+    md:text-[1.5rem] 
+    md:text-[2rem] 
+    md:mb-5
+    xl:text-[2.8rem] 
+    xl:leading-[3.5rem]
+    xl:mb-6;
+  }
+
+  .menu_list_item {
+    @apply mb-4 font-sans text-xs leading-xs opacity-90 lg:text-[1.25rem] lg:leading-sm cursor-pointer flex;
   }
 
   @media screen(xl) {

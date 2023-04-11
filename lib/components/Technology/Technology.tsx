@@ -16,7 +16,7 @@ export const Technology = ({
   videoUrl:string,
 }) => {
   return (
-    <div className="section">
+    <div className="section" id="technology">
       <div className="section_media">
         <Image
           src={technologyImage.sourceUrl}

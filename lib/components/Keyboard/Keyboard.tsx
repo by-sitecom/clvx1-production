@@ -16,7 +16,7 @@ export const Keyboard = ({
   videoUrl: string;
 }) => {
   return (
-    <div className="section">
+    <div className="section" id="keyboard">
       <div className="section_media">
         <Image
           src={keyboardImage.sourceUrl}

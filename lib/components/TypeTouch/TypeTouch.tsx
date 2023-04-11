@@ -12,7 +12,7 @@ export const TypeTouch = ({
   typeTouchVideo:IImage
 }) => {
   return (
-    <div className="wrapper pl-0 pr-0">
+    <div className="wrapper pl-0 pr-0" id="type-and-touch">
       {title && <div className="section__title">{title}</div>}
 
       {content && (

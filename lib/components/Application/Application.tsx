@@ -34,7 +34,7 @@ export const Application = ({
   );
 
   return (
-    <div className="wrapper pt-0">
+    <div className="wrapper pt-0" id="application">
       {title && <div className="section__title">{title}</div>}
       {inDevelopment && (
         <div className="mark_wrap">

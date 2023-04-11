@@ -3,8 +3,10 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import useDocumentScrollThrottled from "../../hooks/useDocumentScrollThrottled";
+import { Menu } from "./Menu.tsx/Menu";
+import { ISocialMedia } from "@/types/page.interface";
 
-export const Header = () => {
+export const Header = ({ socialMedia }: { socialMedia: ISocialMedia[] }) => {
   const [isOpen, setIsOpen] = useState(false);
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -39,11 +41,19 @@ export const Header = () => {
   const hiddenStyle = shouldHideHeader ? "-top-full" : "top-0";
 
   return (
-    <div>
+    <>
       <div className={`header ${shadowStyle} ${hiddenStyle}`}>
-          <Image src="/logo.svg" width={174.56} height={20} alt="Clevetura" />
-          <Image src="/menu.svg" width={33.33} height={23.33} alt="Clevetura" />
+        <Image src="/logo.svg" width={174.56} height={20} alt="Clevetura" />
+        <Image
+          className="cursor-pointer"
+          onClick={() => setIsOpen(true)}
+          src="/menu.svg"
+          width={33.33}
+          height={23.33}
+          alt="Clevetura"
+        />
       </div>
-    </div>
+      <Menu open={isOpen} socialMedia={socialMedia} handleClose={togglePopup} />
+    </>
   );
 };

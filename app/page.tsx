@@ -23,7 +23,7 @@ export default async function Home() {
 
   return (
     <>
-      <Header />
+      <Header socialMedia={data.footer.properties_footer.socialMedia} />
       <Main
         title={data.main.properties_main.mainTitle}
         video={data.main.properties_main.mainVideo}
