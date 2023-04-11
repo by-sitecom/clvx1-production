@@ -36,6 +36,7 @@ export const RoadMap = ({
               initialSlide={roadMap.length}
               slidesPerView={1}
               spaceBetween={0}
+              loop={true}
               breakpoints={{
                 640: {
                   slidesPerView: 2,

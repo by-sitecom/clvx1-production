@@ -32,12 +32,11 @@ export const FooterPopUp = () => {
     }
   );
 
-  const shadowStyle = shouldShowShadow ? "bg-gray-400" : "bg-gray-400";
   const hiddenStyle = shouldHideHeader ? "bottom-0" : "-bottom-full";
 
   return (
     <>
-      <div className={`footerPopUp ${shadowStyle} ${hiddenStyle}`}>
+      <div className={`footerPopUp ${hiddenStyle}`}>
         <div className="footerPopUp_title">
           Join waitlist for Kickstarter<br></br>to get CLVX 1 for $129
           <span>$149</span>

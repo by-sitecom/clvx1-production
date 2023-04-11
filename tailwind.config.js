@@ -7,6 +7,9 @@ module.exports = {
     "./lib/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    linearBorderGradients: (theme) => ({
+      colors: theme("colors"),
+    }),
     container: {
       center: true,
     },
@@ -30,20 +33,6 @@ module.exports = {
       xl: "1200px",
       xxl: "1544px",
       xxxl: "1800px",
-    },
-    colors: {
-      gray: {
-        100: "#F2F2F2",
-        200: "#A6A6A6",
-        300: "#595959",
-        400: "#373737",
-        500: "#1B1B1B",
-        600: "#0D0D0D",
-      },
-      black: "#000000",
-      green: "#15e7a1",
-      blue: "#136bfb",
-      white: "#FFFFFF",
     },
     spacing: {
       0: "0rem",
@@ -77,6 +66,21 @@ module.exports = {
       4: "4px",
     },
     extend: {
+      colors: {
+        gray: {
+          100: "#F2F2F2",
+          200: "#A6A6A6",
+          300: "#595959",
+          400: "#373737",
+          500: "#1B1B1B",
+          600: "#0D0D0D",
+          700: "#060606",
+        },
+        black: "#000000",
+        green: "#15e7a1",
+        blue: "#136bfb",
+        white: "#FFFFFF",
+      },
       gridTemplateColumns: {
         14: "repeat(14, minmax(0, 1fr))",
       },
@@ -104,6 +108,7 @@ module.exports = {
     },
   },
   plugins: [
+    require("tailwindcss-border-gradients")(),
     plugin(function ({ addBase }) {
       addBase({
         html: {
@@ -111,7 +116,7 @@ module.exports = {
           fontSize: "16px",
           lineHeight: "2rem",
           fontFamily: "var(--font-noto-sans)",
-          backgroundColor: "#000000",
+          backgroundColor: "#0D0D0D",
           color: "#F2F2F2",
         },
       });
