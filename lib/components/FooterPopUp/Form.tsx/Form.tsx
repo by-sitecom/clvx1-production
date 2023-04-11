@@ -1,7 +1,7 @@
 
 "use client";
 import { fetchAPI } from "@/lib/client/graphql-client";
-import { SEND_EMAIL } from "@/lib/querys/send-mail";
+import { ADD_USER } from "@/lib/querys/add-user";
 import Image from "next/image";
 import { useState } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
@@ -15,32 +15,26 @@ export const Form = ({
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
+  const [send, setSend] = useState(false);
 
   const handleSubmit = async (evt: { preventDefault: () => void }) => {
     evt.preventDefault();
 
-    const emailContent = `
-      Message received from <strong>${name}</strong>. 
-      Their email address is <strong>${email}</strong>. <br />
-      They'd like to know about...
-      ${message}
-    `;
-
-    const data = await fetchAPI(SEND_EMAIL, {
+    const data = await fetchAPI(ADD_USER, {
       input: {
-        from: process.env.FORM_EMAIL_FROM,
-        to: process.env.FORM_EMAIL_TO,
-        body: emailContent,
-        subject: "Mail from site",
+        clientMutationId: "uniqueId",
+        username: email,
+        firstName: name,
+        password: ">G0xe>GBAuT3x>GGBrAGBA",
+        email: email,
       },
     });
 
-    if (data.sent) {
+    if (data) {
+      setSend(true)
       console.log("send", data);
     }
-    console.log("eror", data);  
+
   };
 
   
@@ -59,6 +53,7 @@ export const Form = ({
               Join waitlist for Kickstarter to get CLVX 1 for $129{" "}
               <span>$149</span>
             </div>
+            {send && <div className="form_send">Thank you for registering</div>}
             <div>
               <label className="label">Your Name</label>
               <input

@@ -696,6 +696,10 @@
     @apply line-through
   }
 
+  .form_send{
+    @apply bg-green p-2 text-black text-opacity-75 rounded-full font-sans font-bold
+  }
+
   .menu_list_title{
     @apply mb-3 
     font-serif 

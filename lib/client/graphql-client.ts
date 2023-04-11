@@ -18,6 +18,7 @@ export async function fetchAPI(
 
   const json = await res.json();
   if (json.errors) {
+    return json.errors;
     console.log("error details", query, variables);
     throw new Error("Failed to fetch API");
   }
