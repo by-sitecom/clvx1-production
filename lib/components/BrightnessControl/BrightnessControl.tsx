@@ -1,6 +1,7 @@
+"use client";
 import { IImage } from "@/types/image.interface";
 import Image from "next/image";
-
+import { useRef, useEffect } from "react";
 export const BrightnessControl = ({
   title,
   content,
@@ -10,16 +11,31 @@ export const BrightnessControl = ({
   content: string;
   brightnessImage: IImage;
 }) => {
+  const videoRef: any = useRef(null);
+  useEffect(() => {
+    if (videoRef && videoRef.current) {
+      videoRef.current.play();
+    }
+  }, [videoRef]);
   return (
     <div className="section">
       <div className="section_media md:order-last">
-        <Image
-          src={brightnessImage.sourceUrl}
-          alt={brightnessImage.altText}
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        />
+        <video
+          ref={videoRef}
+          controls={false}
+          loop
+          muted
+          style={{
+            objectFit: "cover",
+            position: "absolute",
+            width: "150%",
+            height: "100%",
+            left: 0,
+            top: 0,
+          }}
+        >
+          <source src={brightnessImage.sourceUrl} type="video/mp4" />
+        </video>
       </div>
       <div className="wrapper section_wrapper md:order-first">
         <div>
