@@ -183,7 +183,7 @@ export const Application = ({
                           src={el.applicationSettingsImage.sourceUrl}
                           alt={el.applicationSettingsImage.altText}
                           layout="fill"
-                          objectFit="cover"
+                          objectFit="contain"
                           quality={100}
                         />
                       </div>
