@@ -1,7 +1,8 @@
+"use client";
 import { IImage } from "@/types/image.interface";
 import Image from "next/image";
 import Link from "next/link";
-
+import { useRef, useEffect } from "react";
 export const TypeTouch = ({
   title,
   content,
@@ -9,8 +10,15 @@ export const TypeTouch = ({
 }: {
   title: string;
   content: string;
-  typeTouchVideo:IImage
+  typeTouchVideo: IImage;
 }) => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef && videoRef.current) {
+      videoRef.current.play();
+    }
+  }, [videoRef]);
   return (
     <div className="wrapper pl-0 pr-0" id="type-and-touch">
       {title && <div className="section__title">{title}</div>}
@@ -23,7 +31,25 @@ export const TypeTouch = ({
       )}
 
       <div className="typeTouch">
-        <div className="typeTouch_video">
+        <div className="typeTouch_video overflow-hidden">
+          {/*
+          <video
+            ref={videoRef}
+            controls={false}
+            loop
+            muted
+            style={{
+              objectFit: "cover",
+              position: "absolute",
+              width: "150%",
+              height: "100%",
+              left: 0,
+              top: 0,
+            }}
+          >
+            <source src="/gestures.mp4" type="video/mp4" />
+          </video>
+          */}
           <Image
             src={typeTouchVideo.sourceUrl}
             alt={typeTouchVideo.altText}
