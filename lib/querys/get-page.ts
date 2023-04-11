@@ -161,8 +161,8 @@ query {
   }
   roadmap: page(id: "roadmap", idType: URI) {
     properties_roadmap {
-      roadmapTitle
       roadmapDescription
+      roadmapTitle
       roadmap {
         roadmapInProgress
         roadmapDate
