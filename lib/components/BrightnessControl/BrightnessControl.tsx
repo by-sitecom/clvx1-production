@@ -33,8 +33,7 @@ export const BrightnessControl = ({
             left: 0,
             top: 0,
           }}
-        >
-          <source src="/auto.mp4" type="video/mp4" />
+        ><source src="/auto.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="wrapper section_wrapper md:order-first">
