@@ -11,7 +11,7 @@ export const Form = ({
   open: boolean;
 }) => {
 
-    const [name, setName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
@@ -26,19 +26,7 @@ export const Form = ({
       ${message}
     `;
 
-    const data = await fetchAPI(SEND_EMAIL, {
-      input: {
-        from: process.env.FORM_EMAIL_FROM,
-        to: process.env.FORM_EMAIL_TO,
-        body: emailContent,
-        subject: "Mail from site",
-      },
-    });
 
-    if (data.sent) {
-      console.log("send", data);
-    }
-    console.log("eror", data);  
   };
 
   
