@@ -20,7 +20,7 @@ export const RoadMap = ({
 }) => {
   const swiperRef = useRef<SwiperType>();
   return (
-    <div className="wrapper pt-0">
+    <div className="wrapper">
       {title && <div className="section__title">{title}</div>}
 
       {content && (
