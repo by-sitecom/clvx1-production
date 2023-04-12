@@ -24,6 +24,7 @@ export const BrightnessControl = ({
           ref={videoRef}
           controls={false}
           loop
+          poster="/light.jpg"
           muted
           style={{
             objectFit: "cover",
