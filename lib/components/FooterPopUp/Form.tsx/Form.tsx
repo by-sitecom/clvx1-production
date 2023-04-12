@@ -1,6 +1,6 @@
 
 "use client";
-import { fetchAPI } from "@/lib/client/graphql-client";
+import { fetchAPIMail } from "@/lib/client/graphql-client-mail";
 import { ADD_USER } from "@/lib/querys/add-user";
 import Image from "next/image";
 import { useState } from "react";
@@ -20,7 +20,7 @@ export const Form = ({
   const handleSubmit = async (evt: { preventDefault: () => void }) => {
     evt.preventDefault();
 
-    const data = await fetchAPI(ADD_USER, {
+    const data = await fetchAPIMail(ADD_USER, {
       input: {
         clientMutationId: "uniqueId",
         username: email,
