@@ -6,7 +6,7 @@ export async function fetchAPI(
   const headers = { "Content-Type": "application/json" };
 
   // WPGraphQL Plugin must be enabled
-  const res = await fetch("http://clvx1.sitecom.by/graphql" as string, {
+  const res = await fetch("https://clvx.homerecipes.co.uk/graphql" as string, {
     cache: "no-store",
     headers,
     method: "POST",
