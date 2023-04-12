@@ -28,12 +28,13 @@ export const BrightnessControl = ({
           style={{
             objectFit: "cover",
             position: "absolute",
-            width: "150%",
+            width: "100%",
             height: "100%",
             left: 0,
             top: 0,
           }}
-        ><source src="/auto.mp4" type="video/mp4" />
+        >
+          <source src="/light.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="wrapper section_wrapper md:order-first">

@@ -519,7 +519,7 @@
   }
 
   .main{
-    @apply w-full relative h-screen bg-gray-600 mb-6 md:mb-8 lg:mb-10 xl:mb-12 xxl:mb-14 xxxl:mb-16 
+    @apply w-full relative portrait:h-[40vh] landscape:h-screen bg-gray-600 mb-6 md:mb-8 lg:mb-10 xl:mb-12 xxl:mb-14 xxxl:mb-16 
   }
 
   .main_dscr{

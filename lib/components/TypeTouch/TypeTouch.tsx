@@ -31,16 +31,15 @@ export const TypeTouch = ({
 
       <div className="typeTouch">
         <div className="typeTouch_video overflow-hidden">
-          {/*
           <video
             ref={videoRef}
             controls={false}
             loop
             muted
             style={{
-              objectFit: "cover",
+              objectFit: "contain",
               position: "absolute",
-              width: "150%",
+              width: "100%",
               height: "100%",
               left: 0,
               top: 0,
@@ -48,14 +47,6 @@ export const TypeTouch = ({
           >
             <source src="/gestures.mp4" type="video/mp4" />
           </video>
-          */}
-          <Image
-            src={typeTouchVideo.sourceUrl}
-            alt={typeTouchVideo.altText}
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
         </div>
         <div className="typeTouch_wrapper">
           <div className="typeTouch_wrap">
