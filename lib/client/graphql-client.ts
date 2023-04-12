@@ -7,6 +7,7 @@ export async function fetchAPI(
 
   // WPGraphQL Plugin must be enabled
   const res = await fetch("http://clvx1.sitecom.by/graphql" as string, {
+    cache: "no-store",
     headers,
     method: "POST",
     body: JSON.stringify({
