@@ -13,11 +13,12 @@ export const Main = ({ title, video }: { title: string; video: IImage }) => {
     <div className="main">
       <div className="main_video">
         <video
-            poster="/clvx1.jpg"
+          poster="/clvx1.jpg"
           ref={videoRef}
           controls={false}
           loop
           muted
+          playsInline={true}
           style={{
             objectFit: "cover",
             position: "absolute",
