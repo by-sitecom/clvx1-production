@@ -35,7 +35,7 @@ export const TypeTouch = ({
             poster="/gestures.jpg"
             ref={videoRef}
             controls={false}
-            playsInline={true}
+            playsInline
             loop
             muted
             style={{

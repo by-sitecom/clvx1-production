@@ -23,7 +23,7 @@ export const BrightnessControl = ({
         <video
           ref={videoRef}
           controls={false}
-          playsInline={true}
+          playsInline
           loop
           poster="/light.jpg"
           muted

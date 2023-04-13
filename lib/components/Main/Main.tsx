@@ -18,7 +18,7 @@ export const Main = ({ title, video }: { title: string; video: IImage }) => {
           controls={false}
           loop
           muted
-          playsInline={true}
+          playsInline
           style={{
             objectFit: "cover",
             position: "absolute",
