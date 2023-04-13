@@ -23,6 +23,7 @@ export const BrightnessControl = ({
         <video
           ref={videoRef}
           controls={false}
+          playsInline={true}
           loop
           poster="/light.jpg"
           muted
@@ -36,7 +37,6 @@ export const BrightnessControl = ({
           }}
         >
           <source src="/light.mp4" type="video/mp4" />
-
         </video>
       </div>
       <div className="wrapper section_wrapper md:order-first">

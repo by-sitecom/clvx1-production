@@ -32,9 +32,10 @@ export const TypeTouch = ({
       <div className="typeTouch">
         <div className="typeTouch_video overflow-hidden">
           <video
-              poster="/gestures.jpg"
+            poster="/gestures.jpg"
             ref={videoRef}
             controls={false}
+            playsInline={true}
             loop
             muted
             style={{
