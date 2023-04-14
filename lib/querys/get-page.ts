@@ -18,8 +18,8 @@ query {
       }
       clvx1List {
         clvx1ListIcon {
-          altText
           sourceUrl
+          altText
         }
         clvx1ListDescription
       }
